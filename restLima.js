@@ -1,3 +1,4 @@
+let id = 11
 function fGet(){
     fetch(
         "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings",
@@ -29,6 +30,7 @@ function fPost(){
 }
 
 function fPut(id){
+    id = 40429
     fetch(
         `http://localhost:8080/o/headless-delivery/v1.0/blog-postings/${id}`,
         {
@@ -49,6 +51,7 @@ function fPut(id){
 }
 
 function fDelete(id){
+    id = 40429
     fetch(
         `http://localhost:8080/o/headless-delivery/v1.0/blog-postings/${id}`,
         {
