@@ -17,7 +17,7 @@ function docPost(){
 function docPut(id){
     id = 40429
     fetch(
-        `http://localhost:8080/o/headless-delivery/v1.0/blog-postings/${id}`,
+        `http://localhost:8080/o/headless-delivery/v1.0/sites/20122/documents`,
         {
         method: "PUT",
         headers:{
@@ -38,7 +38,7 @@ function docPut(id){
 function docDelete(id){
     id = 40429
     fetch(
-        `http://localhost:8080/o/headless-delivery/v1.0/blog-postings/${id}`,
+        `http://localhost:8080/o/headless-delivery/v1.0/sites/20122/documents`,
         {
             method: "DELETE"
             ,
