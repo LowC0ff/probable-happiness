@@ -1,30 +1,17 @@
-let id = 11
-function docGet(){
-    fetch(
-        "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings",
-        {
-        method: "GET",
-        headers:{
-        Authorization: "Basic " + btoa("test@liferay.com:123")}
-        }
-    )
-    .then((response) => response.json())
-    .then((data) => console.log(data.items))
-}
-
 function docPost(){
-    const doc = document.querySelector()
-    const data = new FormData
+    const doc = document.querySelector('input[type="file"]')
+    var data = new FormData
+    data.append("file", doc.files[0])
+
     fetch(
-        "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings",
+        "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/documents",
         {
         method: "POST",
+        body: data,
         headers:{
         Authorization: "Basic " + btoa("test@liferay.com:123"),
 },
-        body: data
 })
-
 }
 
 function docPut(id){
